@@ -1,3 +1,4 @@
+"use client";
 import makeQueryClient from "@/trpc/query-client";
 import { AppRouter } from "@/trpc/routers/_app";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
