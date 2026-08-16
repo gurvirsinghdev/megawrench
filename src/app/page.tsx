@@ -1,7 +1,11 @@
-export default function Page() {
+import { requireAuth } from "@/lib/auth/guards";
+
+export default async function Page() {
+  const session = await requireAuth();
+
   return (
     <div>
-      Hello, World!
+      <pre>{JSON.stringify(session, null, 2)}</pre>
     </div>
-  )
+  );
 }
